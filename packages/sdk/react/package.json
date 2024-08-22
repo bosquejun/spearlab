@@ -1,0 +1,27 @@
+{
+	"name": "@spearlab/react",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "echo 'Add dev script here'",
+		"build": "rimraf dist && rollup -c",
+		"publish-package": "yarn build && yarn publish ./dist",
+		"test": "echo 'Add test script here'",
+		"lint": "echo 'Add lint script here'"
+	},
+	"dependencies": {
+		"@spearlab/design-system": "*",
+		"hypercore": "^10.37.18",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@spearlab/eslint-config": "*",
+		"@spearlab/typescript-config": "*",
+		"@types/node": "^22.5.0",
+		"@types/react": "^18.3.4",
+		"@types/react-dom": "^18.3.0",
+		"pear-interface": "^1.0.2",
+		"typescript": "^5.5.4"
+	}
+}

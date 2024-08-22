@@ -25,16 +25,16 @@ export default defineConfig({
 			formats: ["cjs"], // CommonJS format for Node.js compatibility
 		},
 		rollupOptions: {
-			external: ["fs", "path", "events", "react", "hypercore"],
+			external: ["fs", "path", "events", "hypercore"],
 			output: {
-				dir: "dist",
-				entryFileNames: "react-app.cjs", // Output file name pattern for entry files
+				dir: "../../templates/bare-react",
+				entryFileNames: "app.cjs", // Output file name pattern for entry files
 				format: "cjs", // CommonJS format
 				preserveModules: false, // Do not bundle modules, keep the original structure
 			},
 		},
 		target: "node16", // Ensure compatibility with Node.js environment
-		outDir: "dist",
+		outDir: "../../templates/bare-react",
 	},
 	resolve: {
 		alias: {
@@ -45,6 +45,10 @@ export default defineConfig({
 			"@spearlab/design-system/spearlab.css": path.join(
 				__dirname,
 				"../../packages/design-system/src/spearlab.css"
+			),
+			"@spearlab/react": path.join(
+				__dirname,
+				"../../packages/sdk/react/src"
 			),
 		},
 	},

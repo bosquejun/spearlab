@@ -1,10 +1,10 @@
 {
 	"name": "@spearlab/design-system",
-	"private": true,
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"build": "tsc -b && cp ./src/spearlab.css ./package.json ./README.md ./dist",
+		"build": "rm -rf dist && tsc -b && cp ./src/spearlab.css ./package.json ./README.md ./dist",
+		"publish-package": "yarn build && yarn publish ./dist",
 		"lint": "eslint .",
 		"preview": "vite preview"
 	},

@@ -23,7 +23,11 @@
 		"paths": {
 			"@spearlab/design-system": [
 				"../../packages/design-system/src/index.ts"
-			]
+			],
+			"@spearlab/design-system/spearlab.css": [
+				"../../packages/design-system/src/spearlab.css"
+			],
+			"@spearlab/react": ["../../packages/sdk/react/src/index.ts"]
 		}
 	},
 	"include": ["src"]

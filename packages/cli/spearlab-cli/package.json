@@ -1,0 +1,39 @@
+{
+	"name": "@spearlab/cli",
+	"version": "0.0.1",
+	"private": true,
+	"main": "dist/index.js",
+	"bin": {
+		"spearlab": "cli.js"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"dist",
+		"cli.js"
+	],
+	"scripts": {
+		"dev": "echo 'Add dev script here'",
+		"build": "rimraf dist && tsc",
+		"test-build": "ts-node -r tsconfig-paths/register  src/create-cli.ts build",
+		"test": "echo 'Add test script here'",
+		"lint": "echo 'Add lint script here'"
+	},
+	"devDependencies": {
+		"@spearlab/eslint-config": "*",
+		"@spearlab/typescript-config": "*",
+		"@types/yargs": "^17.0.33",
+		"esbuild": "^0.23.1",
+		"ts-node": "^10.9.2",
+		"tsconfig-paths": "^4.2.0",
+		"typescript": "^5.5.4"
+	},
+	"dependencies": {
+		"@spearlab/sdk": "^0.0.4",
+		"core-js": "^3.38.1",
+		"dotenv": "^16.4.5",
+		"regenerator-runtime": "^0.14.1",
+		"yargs": "^17.7.2"
+	}
+}

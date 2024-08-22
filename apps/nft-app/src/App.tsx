@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import {
 	Button,
 	ThemeProvider,
@@ -5,6 +7,7 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from "@spearlab/design-system";
+import "@spearlab/design-system/spearlab.css";
 import React from "react";
 
 function App() {

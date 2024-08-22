@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"lib": ["es2021"],
+		"target": "es2021",
+		"outDir": "./dist",
+		"esModuleInterop": true,
+		"declarationMap": true,
+		"declaration": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"noImplicitReturns": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"noImplicitThis": true,
+		"allowJs": true,
+		"skipLibCheck": true,
+		"downlevelIteration": true,
+		"allowSyntheticDefaultImports": true, // Adds support for default imports
+		"resolveJsonModule": true // Allows importing JSON modules
+	},
+	"include": ["src/**/*"], // Adjust as necessary
+	"exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,37 @@
+{
+	"name": "@spearlab/sdk",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "echo 'Add dev script here'",
+		"cp-files": "cp package.json README.md ./dist",
+		"build": "rimraf dist && esbuild src/index.ts --platform=node --bundle --outdir=dist --sourcemap --external:vite && yarn cp-files",
+		"publish-package": "yarn build && yarn publish ./dist",
+		"test": "echo 'Add test script here'",
+		"lint": "echo 'Add lint script here'"
+	},
+	"dependencies": {
+		"fs": "^0.0.1-security",
+		"path": "^0.12.7",
+		"pkg": "^5.8.1",
+		"vite": "^5.4.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.25.2",
+		"@babel/preset-env": "^7.25.4",
+		"@rollup/plugin-babel": "^6.0.4",
+		"@rollup/plugin-commonjs": "^26.0.1",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@spearlab/eslint-config": "*",
+		"@spearlab/typescript-config": "*",
+		"esbuild-plugin-css-modules": "^0.3.0",
+		"rollup": "^4.21.0",
+		"rollup-plugin-copy": "^3.5.0",
+		"rollup-plugin-ignore": "^1.0.10",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"typescript": "^5.5.4",
+		"vite": "^5.4.2"
+	}
+}
