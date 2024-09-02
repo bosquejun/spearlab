@@ -56,6 +56,8 @@ export const resolvePaths = <T = TAnyHash>(
 			} else if (typeof value === "string") {
 				// Convert relative path to absolute path
 				resolved[key] = resolvePath(value);
+			} else {
+				resolved[key] = value;
 			}
 		}
 	};
@@ -73,4 +75,28 @@ export function findEntryFile(dir: string, filenames: string[]) {
 		}
 	}
 	throw new Error("No valid entry file found");
+}
+
+export async function waitUntil(
+	fn: () => Promise<void> | boolean,
+	interval: number = 100,
+	timeout: number = 10_000
+): Promise<void> {
+	const startTime = Date.now();
+
+	async function check(): Promise<void> {
+		const result = await fn();
+		if (typeof result === "boolean" && result) {
+			return;
+		}
+
+		if (Date.now() - startTime >= timeout) {
+			throw new Error("waitUntil timed out");
+		}
+
+		await new Promise((resolve) => setTimeout(resolve, interval));
+		return check();
+	}
+
+	return check();
 }

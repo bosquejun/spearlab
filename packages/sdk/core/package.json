@@ -5,15 +5,19 @@
 		"dev": "echo 'Add dev script here'",
 		"cp-files": "cp package.json README.md ./dist",
 		"build": "rimraf dist && esbuild src/index.ts --platform=node --bundle --outdir=dist --sourcemap --external:vite && yarn cp-files",
+		"build:prod": "rimraf dist  && esbuild src/index.ts --platform=node --minify --bundle --outdir=dist --sourcemap --external:vite && yarn cp-files",
 		"publish-package": "yarn build && yarn publish ./dist",
 		"test": "echo 'Add test script here'",
 		"lint": "echo 'Add lint script here'"
 	},
 	"dependencies": {
 		"fs": "^0.0.1-security",
+		"http": "^0.0.1-security",
 		"path": "^0.12.7",
 		"pkg": "^5.8.1",
-		"vite": "^5.4.2"
+		"tailwindcss-animate": "^1.0.7",
+		"vite": "^5.4.2",
+		"ws": "^8.18.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.25.2",
@@ -26,6 +30,8 @@
 		"@rollup/plugin-typescript": "^11.1.6",
 		"@spearlab/eslint-config": "*",
 		"@spearlab/typescript-config": "*",
+		"@types/tailwindcss": "^3.1.0",
+		"@types/ws": "^8.5.12",
 		"esbuild-plugin-css-modules": "^0.3.0",
 		"rollup": "^4.21.0",
 		"rollup-plugin-copy": "^3.5.0",

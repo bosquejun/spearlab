@@ -18,10 +18,7 @@ export async function getSpearlabConfig(
 		throw new Error(`${SPEARLAB_CONFIG_FILE} is not found.`);
 	}
 
-	const { default: config } = await import(
-		configFileLocation
-		// configFileLocation.slice(0, configFileLocation.lastIndexOf("."))
-	);
+	const { default: config } = await import(configFileLocation);
 
 	const configPath = path.dirname(configFileLocation);
 
