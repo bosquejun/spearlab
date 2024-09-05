@@ -1,15 +1,17 @@
-import { useState } from "react";
+import React from "react";
+import "virtual:pear-hot-reload";
 import "./App.css";
+import pearLogo from "./assets/pear.svg";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [count, setCount] = React.useState(0);
 
 	return (
 		<>
 			<div>
-				<h1>Spearlab</h1>
+				<h1>Hello, P2P World!</h1>
 			</div>
 			<div>
 				<a href='https://vitejs.dev' target='_blank'>
@@ -22,8 +24,12 @@ function App() {
 						alt='React logo'
 					/>
 				</a>
+
+				<a href='https://pears.com' target='_blank'>
+					<img src={pearLogo} className='logo pear' alt='Pear logo' />
+				</a>
 			</div>
-			<h1>Vite + React</h1>
+			<h1>Vite + React + Pear</h1>
 			<div className='card'>
 				<button onClick={() => setCount((count) => count + 1)}>
 					count is {count}

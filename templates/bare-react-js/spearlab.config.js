@@ -1,3 +1,10 @@
 import { defineConfig } from "@spearlab/sdk";
 
-export default defineConfig({});
+/**
+ * @typedef {import("@spearlab/sdk/types/define-config").SpearlabConfig}
+ */
+export default defineConfig({
+	pear: {
+		name: "Bare React JS",
+	},
+});
